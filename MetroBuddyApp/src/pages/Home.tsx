@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, useColorScheme, View} from 'react-native';
+import {SafeAreaView, StyleSheet, Text, useColorScheme} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
@@ -10,7 +10,11 @@ export default function Home(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  return <View style={[styles.container, backgroundStyle]} />;
+  return (
+    <SafeAreaView style={[styles.container, backgroundStyle]}>
+      <Text>안녕</Text>
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
