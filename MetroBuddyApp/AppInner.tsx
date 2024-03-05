@@ -54,6 +54,7 @@ export default function AppInner() {
                   iconOff={require('./src/assets/ic_mydeck_off.png')}
                 />
               ),
+              tabBarLabel: '나의 덱',
             }}
           />
           <Tab.Screen
@@ -67,6 +68,8 @@ export default function AppInner() {
                   iconOff={require('./src/assets/ic_home_off.png')}
                 />
               ),
+              tabBarLabel: '홈',
+              headerShown: false,
             }}
           />
           <Tab.Screen
@@ -80,6 +83,7 @@ export default function AppInner() {
                   iconOff={require('./src/assets/ic_history_off.png')}
                 />
               ),
+              tabBarLabel: '기록',
             }}
           />
         </Tab.Navigator>
@@ -88,7 +92,7 @@ export default function AppInner() {
           <Stack.Screen
             name="SignIn"
             component={SignIn}
-            options={{title: '로그인'}}
+            options={{headerShown: false}} // 이 부분을 추가하세요
           />
         </Stack.Navigator>
       )}
