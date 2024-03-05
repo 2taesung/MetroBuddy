@@ -1,30 +1,65 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text, useColorScheme} from 'react-native';
+import {
+  Image,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  useColorScheme,
+} from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {Header, useTheme} from '@rneui/themed';
 
 export default function Home(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+  const {theme} = useTheme();
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? theme.colors.grey0 : theme.colors.primary,
   };
 
   return (
     <SafeAreaView style={[styles.container, backgroundStyle]}>
-      <Text>안녕</Text>
+      <Header backgroundColor={theme.colors.background}>
+        <Image
+          source={require('../assets/Logo.png')}
+          style={styles.image}
+          resizeMode="contain"
+        />
+      </Header>
+      <View style={styles.mainTopContents}>
+        <Text style={styles.mainTopContentsText}>
+          This is the main top content
+        </Text>
+      </View>
+      <View style={styles.mainContents}>{/* 나머지 메인 컨텐츠 */}</View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  fullScreen: {
-    flex: 1,
-  },
   container: {
     flex: 1,
-    justifyContent: 'space-between', // 상단에 이미지, 하단에 버튼
+    // justifyContent: 'space-between', 제거하거나 변경
     alignItems: 'center',
     paddingBottom: 20, // 하단 여백 추가
+  },
+  image: {
+    width: 114,
+    height: 14,
+  },
+  mainContents: {
+    width: '100%', // 너비를 부모 컨테이너에 맞게 조정
+    // 컨텐츠에 필요한 추가 스타일
+  },
+  mainTopContents: {
+    height: 100,
+    backgroundColor: 'white',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  mainTopContentsText: {
+    // 텍스트 스타일
   },
 });
