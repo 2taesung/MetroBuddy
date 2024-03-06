@@ -42,7 +42,7 @@ export default function AppInner() {
   return (
     <NavigationContainer>
       {isLoggedIn ? (
-        <Tab.Navigator>
+        <Tab.Navigator initialRouteName="Home">
           <Tab.Screen
             name="MyDeck"
             component={MyDeck}
