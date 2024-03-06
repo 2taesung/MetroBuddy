@@ -8,7 +8,7 @@ import {
   useColorScheme,
 } from 'react-native';
 
-import {Header, useTheme} from '@rneui/themed';
+import {Divider, Header, useTheme} from '@rneui/themed';
 
 export default function Home(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -27,6 +27,7 @@ export default function Home(): React.JSX.Element {
           resizeMode="contain"
         />
       </Header>
+      <Divider />
       <View style={styles.mainTopContents}>
         <Text style={styles.mainTopContentsText}>
           This is the main top content
