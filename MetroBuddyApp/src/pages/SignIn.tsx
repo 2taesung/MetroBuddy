@@ -19,7 +19,7 @@ export default function SignIn(): React.JSX.Element {
   const dispatch = useAppDispatch();
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? Colors.darker : '#FFFFFF',
   };
 
   const onSubmit = useCallback(() => {
