@@ -10,6 +10,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {RootStackParamList} from './App';
 import History from './src/pages/History';
 import MyDeck from './src/pages/MyDeck';
+import SplashScreen from 'react-native-splash-screen';
 
 // TabBarIconProps 인터페이스 정의
 interface TabBarIconProps {
@@ -29,6 +30,11 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 export default function AppInner() {
   const isLoggedIn = useSelector((state: RootState) => !!state.user.email);
 
+  useEffect(() => {
+    setTimeout(() => {
+      SplashScreen.hide();
+    }, 1000);
+  }, []);
   useEffect(() => {
     console.log('isLoggedIn', isLoggedIn);
   }, [isLoggedIn]);
