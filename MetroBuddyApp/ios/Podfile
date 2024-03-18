@@ -39,9 +39,6 @@ target 'MetroBuddyApp' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  # SwiftGifOrigin 라이브러리 추가
-  pod 'FLAnimatedImage', '~> 1.0'
-
   target 'MetroBuddyAppTests' do
     inherit! :complete
     # Pods for testing

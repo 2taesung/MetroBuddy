@@ -10,7 +10,6 @@ PODS:
     - React-Core (= 0.73.4)
     - React-jsi (= 0.73.4)
     - ReactCommon/turbomodule/core (= 0.73.4)
-  - FLAnimatedImage (1.0.17)
   - Flipper (0.201.0):
     - Flipper-Folly (~> 2.6)
   - Flipper-Boost-iOSX (1.76.0.1.11)
@@ -1132,7 +1131,6 @@ DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
-  - FLAnimatedImage (~> 1.0)
   - Flipper (= 0.201.0)
   - Flipper-Boost-iOSX (= 1.76.0.1.11)
   - Flipper-DoubleConversion (= 3.2.0.1)
@@ -1210,7 +1208,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - CocoaAsyncSocket
-    - FLAnimatedImage
     - Flipper
     - Flipper-Boost-iOSX
     - Flipper-DoubleConversion
@@ -1337,7 +1334,6 @@ SPEC CHECKSUMS:
   DoubleConversion: fea03f2699887d960129cc54bba7e52542b6f953
   FBLazyVector: 84f6edbe225f38aebd9deaf1540a4160b1f087d7
   FBReactNativeSpec: d0086a479be91c44ce4687a962956a352d2dc697
-  FLAnimatedImage: bbf914596368867157cc71b38a8ec834b3eeb32b
   Flipper: c7a0093234c4bdd456e363f2f19b2e4b27652d44
   Flipper-Boost-iOSX: fd1e2b8cbef7e662a122412d7ac5f5bea715403c
   Flipper-DoubleConversion: 2dc99b02f658daf147069aad9dbd29d8feb06d30
@@ -1399,6 +1395,6 @@ SPEC CHECKSUMS:
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 64cd2a583ead952b0315d5135bf39e053ae9be70
 
-PODFILE CHECKSUM: 0831426ed5105494599d78ef17cdd0328cdc0fb9
+PODFILE CHECKSUM: 8d3633eca81c4d9c98cd57eaf0f8e78457874c5d
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.15.2
